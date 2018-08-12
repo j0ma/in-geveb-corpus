@@ -5,7 +5,7 @@ from helpers import *
 @click.option('--css', help='CSS selector to use')
 @click.option('--output', help='Output path')
 @click.option('--format', help='Output format ("pickle", "text")')
-def main(url, css, output, format):
+def scrape_individual_article(url, css, output, format):
     USER_URL = url
     USER_CSS = css
     DESTINATION = output
@@ -13,18 +13,18 @@ def main(url, css, output, format):
     USER_TREE = url_to_tree(USER_URL)
 
     elems = find_elems(USER_TREE, USER_CSS)
-    
+
     output = create_article
 
     if format == 'pickle':
-        dump_pickle(obj=output, 
+        dump_pickle(obj=output,
                     path=DESTINATION)
     elif format == 'text':
-        dump_text(obj=output, 
-                  path=DESTINATION, 
+        dump_text(obj=output,
+                  path=DESTINATION,
                   mode='a')
     else:
         raise ValueError('Format must be one of (pickle, text)')
 
 if __name__ == '__main__':
-    main()
+    scrape_individual_article()

@@ -4,7 +4,7 @@ from helpers import *
 @click.option('--url', help='URL of website')
 @click.option('--css', help='CSS selector of links')
 @click.option('--output', help='Output path')
-def main(url, css, output):
+def scrape_article_links(url, css, output):
     USER_URL = url
     USER_CSS = css
     DESTINATION = output
@@ -21,4 +21,4 @@ def main(url, css, output):
               mode='a')
 
 if __name__ == '__main__':
-    main()
+    scrape_article_links()

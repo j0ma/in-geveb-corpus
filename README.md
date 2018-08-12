@@ -20,7 +20,7 @@ Last updated: 8/12/2018
 ├── README.md
 ├── run_server.sh
 ├── corpus
-│   └── article_text_files_go_here.txt
+│   └── article text files go here
 ├── data
 │   └── random (meta)data files go here
 ├── scripts

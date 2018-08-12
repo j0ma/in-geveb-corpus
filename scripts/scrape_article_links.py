@@ -1,4 +1,4 @@
-from scripts.helpers import *
+from helpers import *
 
 @click.command()
 @click.option('--url', help='URL of website')
@@ -16,9 +16,9 @@ def main(url, css, output):
 
     href_output = "\n".join(hrefs)
 
-    with open(DESTINATION, 'a') as f:
-        f.write(href_output)
-
+    dump_text(text=href_output,
+              path=DESTINATION, 
+              mode='a')
 
 if __name__ == '__main__':
     main()

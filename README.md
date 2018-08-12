@@ -11,7 +11,7 @@ Corpus of Yiddish based on https://ingeveb.org
     - Romanized/Latin alphabet
 
 ## Todo
-- [] Scrape / extract texts from [](https://ingeveb.org) 
+[] Scrape / extract texts from [](https://ingeveb.org) 
 - [] Write NLP processing server (Flask application?)
     - [] Tokenization
     - [] Translitteration

@@ -22,7 +22,7 @@ def find_elems(tree, css, filter=None):
 @click.option('--url', help='URL of website')
 @click.option('--css', help='CSS selector of links')
 @click.option('--output', help='Output path')
-def main():
+def main(url, css, output):
     USER_URL = url
     USER_CSS = css
     DESTINATION = output
@@ -34,7 +34,7 @@ def main():
 
     href_output = "\n".join(hrefs)
 
-    with open(DESTINATION, 'w') as f:
+    with open(DESTINATION, 'a') as f:
         f.write(href_output)
 
 

@@ -1,5 +1,9 @@
 from helpers import *
 
+def create_article(elems):
+    lines = [e.text_content() for e in elems]
+    return "\n".join(lines)
+
 @click.command()
 @click.option('--url', help='URL of website')
 @click.option('--css', help='CSS selector to use')
@@ -14,13 +18,13 @@ def scrape_individual_article(url, css, output, format):
 
     elems = find_elems(USER_TREE, USER_CSS)
 
-    output = create_article
+    output = create_article(elems)
 
     if format == 'pickle':
         dump_pickle(obj=output,
                     path=DESTINATION)
     elif format == 'text':
-        dump_text(obj=output,
+        dump_text(text=output,
                   path=DESTINATION,
                   mode='a')
     else:

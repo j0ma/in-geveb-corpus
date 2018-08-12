@@ -17,7 +17,7 @@ def find_elems(tree, css, filter=None):
         filter = lambda x: x
     return [elem for elem
                  in tree.cssselect(css)
-                 if filter(elem)]
+                 if filter(elem) is not None]
 
 def dump_pickle(obj, path):
     with open(path, 'wb') as f:

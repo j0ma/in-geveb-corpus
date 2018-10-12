@@ -1,10 +1,30 @@
 import lxml.html as html
+import itertools as it
 import requests
 import cssselect
 import click
 import pickle
+import nltk
 import sys
 import os
+
+def flatten_list(nested_list):
+    _ = it.chain.from_iterable(nested_list)
+    return [x for x in _]
+
+def count_words(text):
+    words = split_into_words(text)
+    return len(words)
+
+def count_sentences(document):
+    sentences = split_into_sentences(document)
+    return len(sentences)
+
+def split_into_words(sentence):
+    return nltk.word_tokenize(sentence)
+
+def split_into_sentences(document):
+    return nltk.sent_tokenize(document)
 
 def url_to_tree(url):
     req = requests.get(url)

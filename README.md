@@ -2,7 +2,6 @@
 
 Corpus of Yiddish based on https://ingeveb.org
 
-Last updated: 8/12/2018
 
 ## Contents
 - Various texts in Yiddish, broken down to sentences

@@ -17,7 +17,6 @@ Corpus of Yiddish based on https://ingeveb.org
 .
 ├── LICENSE
 ├── README.md
-├── run_server.sh
 ├── corpus
 │   └── article text files go here
 ├── data

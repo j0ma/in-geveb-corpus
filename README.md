@@ -2,15 +2,6 @@
 
 Corpus of Yiddish based on https://ingeveb.org
 
-
-## Contents
-- Various texts in Yiddish, broken down to sentences
-- Each sentence available in multiple orthographies
-    - YIVO
-    - Chassidic
-    - Soviet
-    - Romanized/Latin alphabet
-
 ## Directory structure 
 
 ```
@@ -21,6 +12,6 @@ Corpus of Yiddish based on https://ingeveb.org
 │   └── article text files go here
 ├── data
 │   └── random (meta)data files go here
-├── scripts
+├── src
 │   └── various scripts used to create the corpus go here
 ```

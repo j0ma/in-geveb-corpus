@@ -2,6 +2,9 @@
 
 Corpus of Yiddish based on https://ingeveb.org
 
+### TODO
+- [] Clean up yud-yud => tsvey-yudn ligatures
+
 ## Directory structure 
 
 ```

@@ -1,14 +1,16 @@
 from helpers import *
 
+
 def create_article(elems):
     lines = [e.text_content() for e in elems]
     return "\n".join(lines)
 
+
 @click.command()
-@click.option('--url', help='URL of website')
-@click.option('--css', help='CSS selector to use')
-@click.option('--output', help='Output path')
-@click.option('--format', help='Output format ("pickle", "text")')
+@click.option("--url", help="URL of website")
+@click.option("--css", help="CSS selector to use")
+@click.option("--output", help="Output path")
+@click.option("--format", help='Output format ("pickle", "text")')
 def scrape_individual_article(url, css, output, format):
     USER_URL = url
     USER_CSS = css
@@ -20,15 +22,13 @@ def scrape_individual_article(url, css, output, format):
 
     output = create_article(elems)
 
-    if format == 'pickle':
-        dump_pickle(obj=output,
-                    path=DESTINATION)
-    elif format == 'text':
-        dump_text(text=output,
-                  path=DESTINATION,
-                  mode='a')
+    if format == "pickle":
+        dump_pickle(obj=output, path=DESTINATION)
+    elif format == "text":
+        dump_text(text=output, path=DESTINATION, mode="a")
     else:
-        raise ValueError('Format must be one of (pickle, text)')
+        raise ValueError("Format must be one of (pickle, text)")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     scrape_individual_article()

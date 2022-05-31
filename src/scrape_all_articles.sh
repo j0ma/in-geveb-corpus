@@ -62,3 +62,8 @@ do
     fi
 
 done
+
+# Finally remove all empty files (size 0 bytes)
+# Note: these occur because there may be articles that are only translations for example.
+echo "Removing empty articles..."
+ls -s ${OUTPUT_FOLDER}/*.txt | rg "\d+-.*\.txt" | rg "^\s*0" | cut -f4 -d' ' | xargs rm -v

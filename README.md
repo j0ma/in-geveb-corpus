@@ -3,6 +3,7 @@
 Corpus of Yiddish based on https://ingeveb.org
 
 ### TODO
+- [] Overall text cleanup to remove quotations etc
 - [] Clean up yud-yud => tsvey-yudn ligatures
 
 ## Directory structure

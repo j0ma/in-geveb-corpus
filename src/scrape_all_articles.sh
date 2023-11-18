@@ -1,5 +1,5 @@
+ARTICLE_LIST=$(cat ${articles_file:-../data/article_links.txt})
 OUTPUT_FOLDER=${1:-../corpus}
-ARTICLE_LIST=$(cat ../data/article_links.txt)
 
 # Make output dir if needed
 mkdir -pv "${OUTPUT_FOLDER}"
@@ -45,7 +45,7 @@ do
         # make actual python script call
         printf "\tBeginning scrape. Output id: ${COUNTER}\n"
         printf "\tOutput file:: ${OUTPUT}\n"
-        python scrape_individual_article.py \
+        python src/scrape_individual_article.py \
                --url="$URL" \
                --css="$CSS" \
                --output="$OUTPUT" \

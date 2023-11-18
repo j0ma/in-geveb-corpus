@@ -1,0 +1,6 @@
+click
+cssselect
+lxml
+nltk
+pandas
+requests

@@ -1,6 +1,8 @@
-from helpers import *
-import pandas as pd
 import os
+
+import pandas as pd
+
+from helpers import *
 
 # CONSTANTS
 CORPUS_DIRECTORY = os.path.abspath("../corpus")
